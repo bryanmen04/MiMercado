@@ -1,0 +1,32 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# PHP / Composer
+/vendor/
+composer.lock
+
+# Node
+/node_modules/
+
+# CodeIgniter / app
+/application/cache/
+/application/logs/
+/application/sessions/
+/assets/compiled/
+/.env
+.env.local
+.env.*.local
+
+# Database dumps and IDE
+*.sql
+*.sqlite
+.idea/
+.vscode/
+
+# Builds
+/dist/
+/build/
+
+# Misc
+*.log
