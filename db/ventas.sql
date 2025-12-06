@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS TblVentas (
+    eCodVenta INT AUTO_INCREMENT PRIMARY KEY,
+    eCodProducto INT NOT NULL,
+    eCantidad INT NOT NULL,
+    dTotal DECIMAL(12,2) NOT NULL,
+    dFecha DATE NOT NULL,
+    tCodEstatus CHAR(2) NOT NULL DEFAULT 'AC',
+    FOREIGN KEY (eCodProducto) REFERENCES productos(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

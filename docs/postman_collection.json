@@ -1,0 +1,59 @@
+{
+  "info": {
+    "name": "MiMercado - Products",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "GET All Products",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/products" }
+    },
+    {
+      "name": "GET Product by ID",
+      "request": { "method": "GET", "url": "{{baseUrl}}/api/products/1" }
+    },
+    {
+      "name": "POST Create Product",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"tNombre\":\"Leche 1L\",\"tDescripcion\":\"Leche entera\",\"dPrecio\":20.0,\"
+    {
+      "name": "POST Create Product",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"tNombre\": \"Leche 1L\",\n  \"tDescripcion\": \"Leche entera\",\n  \"dPrecio\": 20.00,\n  \"eStock\": 50,\n  \"eCodCategoria\": 1,\n  \"tCodEstatus\": \"AC\"\n}"
+        },
+        "url": "{{baseUrl}}/api/products"
+      }
+    },
+    {
+      "name": "PUT Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"eCodProducto\": 1,\n  \"tNombre\": \"Leche 1L Mod\",\n  \"tDescripcion\": \"Leche entera modificada\",\n  \"dPrecio\": 22.00,\n  \"eStock\": 45,\n  \"eCodCategoria\": 1,\n  \"tCodEstatus\": \"AC\"\n}"
+        },
+        "url": "{{baseUrl}}/api/products/1"
+      }
+    },
+    {
+      "name": "DELETE Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/products/1"
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" }
+  ]
+}

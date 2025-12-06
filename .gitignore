@@ -2,31 +2,21 @@
 Thumbs.db
 .DS_Store
 
-# PHP / Composer
-/vendor/
-composer.lock
+# .NET build
+bin/
+obj/
+.vs/
 
-# Node
-/node_modules/
-
-# CodeIgniter / app
-/application/cache/
-/application/logs/
-/application/sessions/
-/assets/compiled/
-/.env
-.env.local
-.env.*.local
-
-# Database dumps and IDE
-*.sql
-*.sqlite
-.idea/
+# IDE
 .vscode/
+.idea/
 
-# Builds
-/dist/
-/build/
+# Logs, cache, sessions
+application/logs/
+application/cache/
+application/sessions/
 
-# Misc
-*.log
+# Secrets
+appsettings.Development.json
+.env
+*.user

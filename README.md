@@ -1,8 +1,22 @@
 # MiMercado
 
-Repositorio base del proyecto MiMercado.
+Repositorio del proyecto MiMercado — avance 50% API ASP.NET Core.
 
-Remote oficial: git@github.com:bryanmen04/MiMercado.git
+Repositorio: https://github.com/bryanmen04/MiMercado.git
+
+Contenido principal:
+- dotnet/                -> código fuente ASP.NET Core (API)
+- db/                    -> scripts SQL (create/update + dump)
+- docs/                  -> documentación y colección Postman
+- README_API.md          -> instrucciones para ejecutar la API localmente
+
+Pasos rápidos para ejecutar local:
+1. Ajustar connection string en dotnet/appsettings.json (o usar variable de entorno).
+2. cd dotnet && dotnet restore && dotnet build && dotnet run --urls "http://localhost:5000"
+3. Abrir Swagger: http://localhost:5000
+
+Entrega:
+- ZIP con el dump SQL, PDF de avance, Postman collection y link al repo (ver scripts/create_submission.bat).
 
 ## Ramas requeridas
 - master (entregas formales)

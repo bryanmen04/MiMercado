@@ -1,0 +1,70 @@
+openapi: 3.0.1
+info:
+  title: MiMercado API (Avance)
+  version: "0.5"
+paths:
+  /api/products:
+    get:
+      summary: Lista productos
+      tags: [Products]
+      responses:
+        '200':
+          description: OK
+    post:
+      summary: Crear producto
+      tags: [Products]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '201':
+          description: Created
+  /api/products/{id}:
+    get:
+      summary: Obtener producto por id
+      tags: [Products]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200': { description: OK }
+        '404': { description: Not found }
+    put:
+      summary: Actualizar producto
+      tags: [Products]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '204': { description: No Content }
+    delete:
+      summary: Eliminar producto
+      tags: [Products]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: integer }
+      responses:
+        '204': { description: No Content }
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        eCodProducto: { type: integer }
+        tNombre: { type: string }
+        tDescripcion: { type: string }
+        dPrecio: { type: number, format: float }
+        eStock: { type: integer }
+        eCodCategoria: { type: integer, nullable: true }
+        tCodEstatus: { type: string }
